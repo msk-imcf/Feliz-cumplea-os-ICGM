@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nouveau départ, même lune, nouveau lys, nouveau coucher de soleil</title>
+<link rel="icon" href="petit princess.jpg">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+
+        /* FONDO IMAGEN */
+        background-image: url("fondo.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+    }
+
+    h1 {
+        color: gray;
+        margin-top: 20px;
+        font-size: 8vw;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    /* Tabs */
+    .tabs {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tab-btn {
+        padding: 12px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 10px;
+        background: rgba(0,0,0,0.6);
+        color: pink;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .tab-btn:hover {
+        transform: scale(1.05);
+        background: rgba(0,0,0,0.8);
+    }
+
+    /* Contenido */
+    .contenido {
+        display: none;
+        background: rgba(200,200,200,0.6);
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 350px;
+
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+    }
+
+    .contenido.activo {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .contenido img {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        transition: transform 0.4s;
+    }
+
+    .contenido img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .boton {
+        font-size: 6vw;
+        padding: 20px 40px;
+        border: none;
+        border-radius: 20px;
+        background: #ff4d4d;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .boton:hover {
+        transform: scale(1.1);
+    }
+
+    @media (min-width: 600px) {
+        h1 {
+            font-size: 40px;
+        }
+        .boton {
+            font-size: 30px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Música -->
+<audio id="musica" loop>
+    <source src="Gone-gone-gone.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Pantalla inicial -->
+<div class="overlay" id="pantalla">
+    <button class="boton" onclick="reproducir()">▶ Reproducir</button>
+</div>
+
+<h1>petit lys 🐻</h1>
+
+<!-- Tabs -->
+<div class="tabs">
+    <button class="tab-btn" onclick="toggle('c1')">Mensaje 1</button>
+    <button class="tab-btn" onclick="toggle('c2')">Mensaje 2</button>
+    <button class="tab-btn" onclick="toggle('c3')">Mensaje 3</button>
+    <button class="tab-btn" onclick="toggle('c4')">Mensaje 4</button>
+    <button class="tab-btn" onclick="toggle('c5')">Mensaje 5</button>
+    <button class="tab-btn" onclick="toggle('c6')">Mensaje 6</button>
+    <button class="tab-btn" onclick="toggle('c7')">Mensaje 7</button>
+</div>
+
+<!-- Contenido -->
+<div id="c1" class="contenido">
+    <p>Hola hola espero puedas ver esto lo hice para ti se que no es la gran cosa pero es algo que hice con esfuerzo se que estas pasando por cosas y que no estas bien aunque me mientas espero te guste 
+        , a falta de presupusto para darte algo mejor te hice esto, Trate de hacerlo lo mejor que pude (puede que tenga errores ortograficos sorry)👻</p>
+</div>
+
+<div id="c2" class="contenido">
+    <p>Claro hoy es tu cumpleaños felicades ya estas mas grande auque aun te ves mas pequeña jaja aun recuerdo muchas cosas, de las pocas fotos que tengo esta es mi foto favorita
+        ya que es obvio que te ves tierna pero en esta foto aun mas y a ese gato le tenia mucha envida porque el si podia estar todo el tiempo contigo, ademas desde ese entonces 
+        sabia lo que eres y lo que seras y no solo eso podia ver esa hermosa sonrisa que tienes 
+
+    </p>
+    <img src="caro con gato.jpeg">
+</div>
+
+<div id="c3" class="contenido">
+    <p>Hoy cumples 20 se que has pasado por cosas que prefieres no contar, se que no ha sido facil aun si veo a una mujer fuerte pero tambien a una mujer que 
+        apesar de lo fuerte que es tambien tiene un corazón y que en tu rostro puedo ver lo que me ocultas, escogi esta foto porque en ella se ve esa linda 
+        sonrisa que tienes por la cual haria lo que fuera para poder verla todo el tiempo.
+        
+        Eres una gran mujer: fuerte, valiente, sensible, inteligente, leal y profundamente humana. De esas que sienten mucho, pero siguen de pie; de las que caen, se sacuden el miedo y continúan, aunque nadie esté mirando.
+Eres paciente cuando toca esperar, firme cuando hay que poner límites y generosa incluso cuando el mundo te ha quedado a deber.
+Tienes una luz tranquila que no hace ruido, pero que se nota en la forma en que cuidas, en cómo escuchas, en cómo sigues dando aun cuando estás cansada.
+No necesitas demostrar nada, porque tu historia, tus decisiones y tu manera de amar hablan por ti. Y aunque no siempre te lo digan, tu presencia deja huella, tu corazón suma y tu existencia importa más de lo que imaginas.
+
+    </p>
+    <img src="playa.jpg">
+    <img src="pingu-molesto.jpg">
+</div>
+
+<div id="c4" class="contenido">
+    <p>Aveces se no que decir o como comportarme aun asi no me juzgas contigo todo fluye se que suena raro pero es verdad, sabes que me gusta mucho deadpool y a ti 
+        de varios personajes que te gustan esta cinnamoroll y esta imagen tu me la diste es especial porque tiene ambos personajes, para decirlo de 
+        mejor forma como diria deadpool <p style="color: red;">Tus locuras van con mis locuras </p> 
+    </p>
+    <img src="us.jpg">
+</div>
+
+<div id="c5" class="contenido">
+    <p>Se que no siempre te puedo ver por x razon aun asi hay muchas cosas que me hacen recordarte como las fotos, las pulseras que llevo, las cosas que tengo de ti
+        pero en particular hay algo qye hace que me acuerde de ti que seria esta imagen hice y que te enseñe ya que tiene cosas que se que te gustan como snoopy,kirby,
+        cinnamoroll y pochaco o como yo le digo pochoco
+    </p>
+    <img src="recuerdo a ella.png">
+</div>
+
+<div id="c6" class="contenido">
+    <p>Sé que tienes algo, es muy claro. Aunque trates de ocultarlo, para mí es muy obvio, porque cambia tu tono de voz, la forma en la que te expresas e incluso cómo contestas. Dirás que no, pero no me puedes engañar.
+Sé que esa es tu forma de hacer las cosas y crees que es lo mejor, pero no siempre lo es. A veces no sé qué hacer para ayudarte, para mostrarte que siempre estaré ahí para apoyarte, incluso si solo quieres llorar… ahí estaré.
+Sé el tipo de persona que eres. Sé lo fuerte que eres, pero también sé lo fuerte que a veces quieres aparentar ser por miedo. Sé que tienes muchos problemas, que no te gusta llorar, y lo respeto, pero no es algo bueno. Sé que da miedo llorar porque puede parecer debilidad, pero no es cierto. Llorar demuestra el enorme corazón que tienes, lo mucho que sientes y todo lo que eres capaz de dar.
+Si pudiera quitarte todos tus problemas, todos los conflictos y todo ese peso que cargas… lo haría sin pensarlo. Haría lo que fuera por volver a ver esa linda sonrisa que tienes. Pero no puedo hacerlo. Lo que sí puedo hacer es estar contigo y ayudarte a cargar todo eso.
+Esta foto es muy linda, no solo por el gesto que haces, sino porque pude darte el pingüino que llamamos Zarek. Cuando te di a Pochaco no fue solo porque te gusta, sino para que pudieras abrazarlo y dormir con él, aunque era muy grande. Pero Zarek no solo es para eso, también es para que lo abraces cuando sientas que no puedes seguir, cuando sientas que el mundo se te cae y que no hay nadie ahí.
+También es para que me recuerdes… y que cuando lo abraces, sientas que estoy contigo: abrazándote, cuidándote, apoyándote, alentándote y esperándote.
+Espero que aún tengas el peluche, o mejor aún, que tengas a ambos, porque los dos tienen el mismo propósito: cuidarte.
+Y recuerda, cuando sientas que el mundo se cae y ya no puedes más, voltea… ahí estaré yo, alentándote. Estoy aquí para ayudarte, aunque sea solo escuchándote o abrazándote mientras lloras.
+    </p>
+     <img src="pinguino.jpg">
+      <img src="ella-Pingu.jpg">
+</div>
+
+<div id="c7" class="contenido">
+    <p>Se que al inicio dije que no tenia dinero, pero te prepare una pequeña sorpresa por tu cumpleaños no se si nos podamos ver para que lo veas 
+      🐻‍❄️🕯️  
+    </p>
+</div>
+
+<script>
+function reproducir() {
+    const musica = document.getElementById("musica");
+    musica.play().catch(() => {});
+    document.getElementById("pantalla").style.display = "none";
+}
+
+function toggle(id) {
+    const elemento = document.getElementById(id);
+
+    // Si ya está abierto → cerrar
+    if (elemento.classList.contains("activo")) {
+        elemento.classList.remove("activo");
+    } else {
+        // Cierra todos
+        document.querySelectorAll(".contenido").forEach(c => {
+            c.classList.remove("activo");
+        });
+
+        // Abre el seleccionado
+        elemento.classList.add("activo");
+    }
+}
+</script>
+
+</body>
+</html>
